@@ -35,7 +35,7 @@ window.addEventListener('load', function() {
 
             this.classList.add('checked');
 
-            document.getElementById("main").innerHTML = getData();
+            document.getElementById("main").innerHTML = getData(this.dataset.id, 8);
 
             SN.makeFocusable();
         });

@@ -119,6 +119,11 @@ img{
     padding-left: 50px;
     overflow: auto;
     scroll-behavior: smooth;
+    transition: transform .2s;
+
+    &.shift{
+        transform: translateX(170px);
+    }
 }
 
 .nav{
@@ -132,13 +137,24 @@ img{
 
         span{
             color: #fff;
+            font-size: 18px;
+            margin-left: 14px;
             opacity: 0;
             transition: opacity .2s;
+        }
+
+        img{
+            display: block;
         }
     }
     
 }
 
+.main{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px;
+}
 .card{
     width: calc(16.66% - 10px);
     min-height: 160px;
@@ -150,7 +166,7 @@ img{
     border-radius: 4px;
 }
 
-.leftbox.opened .nav__item span{
+.leftbox.opened .nav__item-text{
     opacity: 1;
     transition-delay: .2s;
 }
